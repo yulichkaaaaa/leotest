@@ -1,0 +1,23 @@
+type Test {
+    id: ID!
+    name: String!
+    courseId: ID!
+    description: String
+    authorId: ID!
+}
+
+input TestInput {
+    name: String!
+    courseId: ID!
+    description: String
+    authorId: ID!
+}
+
+type Query {
+    testById(id: ID): Test
+    testsByCourseId(courseId: ID): [Test]!
+}
+
+type Mutation {
+    addTest(input: TestInput): Test
+}
