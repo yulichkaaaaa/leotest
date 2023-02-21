@@ -1,7 +1,0 @@
-version: "2.2"
-
-services:
-  leotest:
-    image: "python"
-  databese:
-    image: "postgres"
